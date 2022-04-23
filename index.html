@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUR HOSSEN | Full Stack Web Devloper  </title>
+    <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+
+
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <style>
+
+        
+body{
+    background:rgba(44, 40, 40, 0.671);
+    color: antiquewhite;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.nav-bar{
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+    padding: 5px;
+    
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    font-weight:bold;
+    font-size:medium;
+
+}
+.nav-bar  li{
+    display: inline-block;
+    padding: 3px 25px;
+    color: rgb(10, 44, 78);
+    font-weight: 700;
+    border: 1px rgba(90, 230, 240, 0.87) solid;
+    border-radius: 5px;
+
+
+}
+
+#icons li a{
+    
+    color:rgba(44, 40, 40, 0.671);
+text-decoration: black;
+}
+
+#icons li{
+  
+    display: inline-block;
+    padding: 5px 5px;
+    justify-content: space-between;
+    
+}
+#icons li a:hover{
+
+    color: brown;
+  
+   
+}
+
+
+span{
+    color: brown;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+}
+p{
+    color: rgb(137, 139, 143);
+    font-size: 19px;
+    
+}
+img{
+    border-radius: 6px;
+    height: 400px;
+    max-width: 520px;
+  
+}
+img:hover{
+
+    filter: brightness(80%);
+
+}
+#img1{
+    border-radius: 49%;
+
+    
+}
+.btn{
+    width:231px;
+    height: 40px;
+    background: rgba(44, 40, 40, 0.671);
+    color: brown;
+    font-size: 19px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+
+
+
+}
+.btn:hover{
+    color: aliceblue;
+    background: brown ;
+    
+}
+
+
+
+.line{
+
+    display: flex;
+    padding: 40px 5%;
+
+    margin: 20px 10px;
+
+}
+a{
+    text-decoration: none;
+}
+
+
+input{
+    width: 399px;
+    padding: 5px 5px;
+    color: antiquewhite;
+    background: rgba(44, 40, 40, 0.671);
+}
+textarea{
+    width: 320px;
+    height: auto;
+    padding: 5px 5px;
+    color: antiquewhite;
+    background: rgba(44, 40, 40, 0.671);
+}
+
+#qrcode{
+    margin: 10% 10%;
+    padding: 10% 20%;
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+footer{
+   text-align: center;
+}
+
+ @media (min-width:576px){
+     .container {
+         max-width: 544px;
+     }
+ }
+ @media (min-width:1200px){
+    .container {
+        max-width: 1080px;
+    }
+}
+
+ 
+
+
+
+    
+        </style>
+
+
+
+</head>
+
+<body>
+    <div  class="nav-bar">
+        <a href=""> &#60; i'm<span> &#64;nur</span> &#47;&#62;</a>
+        <ul>
+            <li><a href="#HOme">HOme</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#gallary">gallary</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+    </div>
+
+    <div id="HOme" class="container">
+
+       <div class="line">
+
+            <div class="half-width">
+        <h1></p>Welcome To <br> <span> N U R Hossen</span>'s profile <hr></h1>
+       <p>Hello ! This is me "nur hossen" a professional UI/UX designer with Full Stack web-developer . I <span>LOve</span> coding .If You Want Best then  Hire Me</p>
+
+
+
+
+    <button class="btn">Download Resume</button>
+    
+    <ul id="icons">
+        <li> <a href="https://github.com/prognur1705"><i class="fa-brands fa-github"></i></a> </li> 
+        <li><a href="https://www.instagram.com/ignis.__.crest/?hl=en"><i class="fa-brands fa-instagram"></i></a></li>
+        <li><a href="prognur1705@gmail.com"><i class="fa-brands fa-google"></i></a>
+        </li>
+        <li><a href="https://www.facebook.com/profile.php?id=100008929082441"><i class="fa-brands fa-facebook"></i></a></li>
+
+
+    </ul>
+                
+
+
+ </div>
+
+    <div class="half-width">
+
+        
+        <img id="img1" src="img/port1.png" alt="">
+
+    </div>
+
+    
+    
+    
+        
+    </div>
+    <div id="gallary"  class="profile">
+    
+        <h1  >My <span>Gallary</span> <hr></h1>
+    
+        <p>Photography is the art, application, and practice of creating durable images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film..</p>
+        
+       </div>
+       <div  class="line">
+           <div class="half-width">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, culpa.</p>
+               <img src="img/imgf1.jpg" alt="">
+           </div>
+           <div class="half-width">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, impedit.</p>
+               <h1><span>ROSE</span></h1>
+               <img src="img/imgf3(2).jpg" alt="">
+
+
+
+           </div>
+           
+        </div>
+        <div class="line">
+            <div class="half-width">
+               <h2 id="About"><span> Introduction $ <hr> </span></h2>
+               <p>A Web developer is a kind of programmer who specializes in the development of applications relating to the World Wide Web or distributed network applications, which typically run protocols like HTTP from a Web server to a client browser using associated programming languages like HTML/CSS, C#, Ruby and PHP to name a few. A Web developer is usually concerned with the back end or the programming aspect of creating a website or Web application and is not to be confused with a Web designer, who only deals with the aesthetics of a website or application, although many professionals have both skill sets.<a href="https://www.techopedia.com/definition/17353/web-developer#:~:text=A%20Web%20developer%20is%20a,and%20PHP%20to%20name%20a"><span>read more...</span></a></p>
+            </div>
+            <div class="half-width">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+                <img src="img/imgf4 (3).jpg" alt="">
+            </div>
+       </div>
+
+
+       <div class="line">
+        <div class="half-width">
+            <h2 id="contact"><span>contact <hr></span></h2>
+            <form action="">
+                <input type="text" name="" placeholder="Name" id=""> <br>
+                <input type="tel" name="" placeholder="contact" id=""> <br>
+                    <input type="email" name="" placeholder="Email" id="">
+                    <br>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Comment's!"></textarea> <br>
+                <button class="btn"> SUBMITE </button>
+
+
+
+
+               
+            
+          
+
+     </form>
+        </div>
+        <div id="qrcode" class="half-width">
+
+            <h2><span><b><i>HIRE ME</i></b> <hr> </span></h2> 
+
+            <img  src='https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100008929082441&chs=180x180&choe=UTF-8&chld=L|2' alt='qr code'> 
+
+
+
+        </div>
+    </div>
+
+       
+       
+       
+
+</div>
+
+</div>
+       
+        
+
+
+
+
+
+
+
+
+    
+
+
+<hr>
+ <footer> Copyright<i style="color: black;" class="fa-solid fa-copyright"></i>2022 | Alright's Reserved By prognur</footer>
+ <hr>
+
+</body>
+</html>
